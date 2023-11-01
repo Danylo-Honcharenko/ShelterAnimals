@@ -13,7 +13,7 @@ public class ShelterService {
         animals.add(animal);
     }
 
-    public void addList(List<Animal> animals) {
+    public void updateList(List<Animal> animals) {
         this.animals = animals;
     }
 

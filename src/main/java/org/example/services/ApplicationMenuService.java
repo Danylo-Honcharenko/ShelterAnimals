@@ -37,7 +37,7 @@ public class ApplicationMenuService {
     }
 
     public void unloadAnimal() {
-        shelter.addList(storage.unload());
+        shelter.updateList(storage.unload());
     }
 
     public boolean exit() {
