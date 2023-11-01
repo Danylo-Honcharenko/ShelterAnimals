@@ -1,11 +1,18 @@
 package org.example.services;
 
+import org.example.AutoSave;
 import org.example.Console;
 import org.example.model.Animal;
 
 public class ApplicationMenuService {
     private final ShelterService shelter = new ShelterService();
     private final StateStorageService storage = new StateStorageService(shelter.findAll());
+    private final AutoSave autoSave = new AutoSave(storage);
+    private final Thread thread = new Thread(autoSave);
+
+    public ApplicationMenuService() {
+        thread.start();
+    }
 
     public void addAnimal() {
         System.out.println("==============");
@@ -41,7 +48,7 @@ public class ApplicationMenuService {
     }
 
     public boolean exit() {
-        storage.save();
+        thread.interrupt();
         return true;
     }
 }

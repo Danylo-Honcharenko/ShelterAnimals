@@ -3,12 +3,14 @@ package org.example.services;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
+import lombok.NoArgsConstructor;
 import org.example.model.Animal;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+@NoArgsConstructor
 public class StateStorageService {
     private List<Animal> animals;
     private final ObjectMapper mapper = new JsonMapper();
