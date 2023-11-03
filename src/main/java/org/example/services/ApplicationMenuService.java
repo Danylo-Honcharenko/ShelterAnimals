@@ -1,7 +1,9 @@
 package org.example.services;
 
 import org.example.AutoSave;
-import org.example.Console;
+// About dependency in pom.xml
+import org.myLib.Console;
+// import org.example.Console;
 import org.example.model.Animal;
 
 public class ApplicationMenuService {
