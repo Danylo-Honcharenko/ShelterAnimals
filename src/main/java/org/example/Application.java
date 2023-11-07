@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.services.ApplicationMenuService;
+import org.myLib.Console;
 
 public class Application {
     public static void run() {
